@@ -38,6 +38,7 @@ export default {
         allResponse = ''
         j++;
       }
+      state.capitalResponse.push(state.capitalAnswer)
       console.log(state.capitalResponse)
     };
 
