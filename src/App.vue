@@ -1,26 +1,41 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <main>
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import axios from 'axios';
+import { onMounted, reactive} from "vue";
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  setup() {
+
+    const state = reactive({
+      allQuestions: ''
+    })
+
+    function getData() {
+      axios.get("https://restcountries.eu/rest/v2/all?fields=name;capital;flag")
+      .then((response) => {
+        state.allFlag = response.data
+        console.log(state.allFlag)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+
+    }
+
+    onMounted(getData)
+      return {
+        getData
+      }
+    }
 }
+
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
