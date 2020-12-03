@@ -1,6 +1,9 @@
 <template>
   <main>
-    <p>Capital of {{ state.countryAnswer.name }}?</p>
+    <p>{{ state.capitalAnswer.capital }} is the capital of</p>
+    <ul>
+      <li v-for="response in state.capitalResponse" :key="response.id">{{ response.name }}</li>
+    </ul>
   </main>
 </template>
 
@@ -13,31 +16,29 @@ export default {
   setup() {
 
     const state = reactive({
-      countryAnswer: '',
+      capitalAnswer: '',
+      capitalResponse: []
     })
 
     const getData = async () => {
-      const selectedIndex = [];
       const { data } = await axios.get(
         "https://restcountries.eu/rest/v2/all?fields=name;capital;flag"
       );
-      let i = 0;
-      while (i < 5) {
-        let j = 0;
-        const eachQuestion = {
-          list: [],
-          answer: Math.floor(Math.random() * 4)
-        };
-        while (j < 4) {
-          const index = Math.floor(Math.random() * 250);
-          state.countryAnswer = data[index];
 
-          selectedIndex.push(index);
-          eachQuestion.list.push(state.countryAnswer);
-          j++;
-        }
-        i++;
+      const index = Math.floor(Math.random() * 250);
+      state.capitalAnswer = data[index];
+      console.log(state.capitalAnswer)
+      
+      let j = 0;
+      while (j < 3) {
+        const index = Math.floor(Math.random() * 250);
+        let allResponse = data[index];
+        
+        state.capitalResponse.push(allResponse);
+        allResponse = ''
+        j++;
       }
+      console.log(state.capitalResponse)
     };
 
     onMounted(getData);
