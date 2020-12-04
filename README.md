@@ -1,4 +1,4 @@
-# challenge-country-quiz
+# test-country-quiz
 
 ## Project setup
 ```
