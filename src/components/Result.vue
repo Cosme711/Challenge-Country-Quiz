@@ -2,7 +2,7 @@
   <div class="text-center my-4 mx-4">
     <img
       class="winners mb-8"
-      src="@/assets/img/undraw_winners_ao2o 2.svg"
+      src="@/assets/images/undraw_winners_ao2o 2.svg"
       alt=""
     />
     <h1

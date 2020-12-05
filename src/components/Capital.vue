@@ -7,7 +7,7 @@
       <p
         v-for="(answer, index) in answers"
         :key="index"
-        class="text-lg border-2 border-solid rounded-lg p-1 px-18 pl-3 m-2 mx-0 mb-5 cursor-pointer hover:text-white text-purple-500 hover:bg-orange-500 border-purple-500 flex flex-row"
+        class="text-lg border-2 border-solid rounded-lg p-2 px-18 pl-3 m-2 mx-0 mb-5 cursor-pointer hover:text-white  hover:bg-yellow-500 text-purple-500 hover:bg-orange-500 border-purple-500 flex flex-row"
         :class="{
           correct: answer.isCorrect && pickedAnswer,
           incorrect: !answer.isCorrect && pickedAnswer === answer,
@@ -19,7 +19,7 @@
         <span class="pr-4 text-2xl font-medium">{{
           answerLetters[index]
         }}</span>
-        <span class="flex-grow mt-3px">{{ answer.Ans }}</span>
+        <span class="flex items-center">{{ answer.Ans }}</span>
       </p>
     </div>
   </div>
