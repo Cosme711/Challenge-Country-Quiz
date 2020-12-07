@@ -1,14 +1,16 @@
 <template>
   <div>
     <img class="small rounded" :src="flagUrl" alt="" />
-    <p class="font-extrabold text-blue-900 py-4 text-2xl mr-6">
+    <p
+      class="font-extrabold text-blue-900 py-4 text-sm sm:text-xl md:text-2xl "
+    >
       Which country does this flag belong to?
     </p>
     <div>
       <p
         v-for="answer in answers"
         :key="answer.id"
-        class="text-lg border-2 border-solid rounded-lg p-2 px-18 pl-3 m-2 mx-0 mb-5 cursor-pointer hover:text-white hover:border-none hover:bg-yellow-500 hover:border-opacity-0 text-purple-500 hover:bg-orange-500 border-purple-500 flex flex-row"
+        class="text-sm sm:text-xl md:text-lg border-2 border-solid rounded-lg p-2 px-18 pl-3 m-2 mx-0 mb-5 cursor-pointer hover:text-white hover:border-none hover:bg-yellow-500 hover:border-opacity-0 text-purple-500 hover:bg-orange-500 border-purple-500 flex flex-row"
         :class="{
           correct: answer.isCorrect && state.pickedAnswer,
           incorrect: !answer.isCorrect && state.pickedAnswer === answer,
