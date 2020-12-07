@@ -21,7 +21,7 @@
     </div>
     <div class="flex justify-end">
       <button
-        class="rounded-lg bg-yellow-500 px-6 py-2 text-white font-extrabold text-lg"
+        class="rounded-lg bg-yellow-500 px-6 py-2 text-white font-extrabold text-lg focus:outline-none"
         @click="nextQuestion()"
       >
         Next
