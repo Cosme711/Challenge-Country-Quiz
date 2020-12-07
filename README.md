@@ -22,6 +22,8 @@
 
 ## Overview
 
+![screenshot](https://github.com/Cosme711/Challenge-Country-Quiz/blob/master/screenshot.png)
+
 You can see my demo here : https://challenge-country-quiz.netlify.app/
 
 Made with Vue, Vuex, Vue-router, TailwindCSS, Sass & Axios 
