@@ -9,7 +9,9 @@
       src="@/assets/images/inGame.svg"
       alt=""
     />
-    <div class="round bg-gray-200 max-w-sm overflow-hidden py-7 px-5 sm:px-12">
+    <div
+      class="rounded bg-gray-200 max-w-sm overflow-hidden py-7 px-5 sm:px-12"
+    >
       <Flag v-if="typeOfModal === 'flag'" />
       <Capital v-if="typeOfModal === 'capital'" />
       <Result v-if="typeOfModal === 'result'" />
