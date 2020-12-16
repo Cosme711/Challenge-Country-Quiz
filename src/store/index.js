@@ -99,7 +99,6 @@ export default createStore({
         }
         return a;
       }
-
       commit("GENERATE_ANSWERS", shuffle(answers));
     },
     generateFlagUrl({ commit }, randCountry) {

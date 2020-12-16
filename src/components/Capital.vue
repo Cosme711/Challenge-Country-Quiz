@@ -1,8 +1,6 @@
 <template>
   <div>
-    <p
-      class="mr-6 mt-2 pb-4 font-bold text-blue-900 text-sm sm:text-xl md:text-2xl"
-    >
+    <p class="mr-6 mt-2 pb-4 font-bold text-blue-900 text-sm sm:text-xl md:text-2xl">
       {{ question }}
     </p>
     <div class="mx-0">
@@ -95,10 +93,6 @@ export default {
 
 .correct:hover {
   background: #60bf88;
-}
-
-.mt-3px {
-  margin-top: 3px;
 }
 
 .incorrect {

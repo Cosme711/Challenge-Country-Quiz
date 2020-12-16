@@ -93,10 +93,6 @@ export default {
   width: 70px;
 }
 
-.mt-3px {
-  margin-top: 3px;
-}
-
 .disabled {
   pointer-events: none;
 }
@@ -119,7 +115,4 @@ export default {
   background: #ea8282;
 }
 
-.block-0 > svg {
-  display: unset;
-}
 </style>
