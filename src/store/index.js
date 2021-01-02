@@ -1,6 +1,8 @@
 import { createStore } from "vuex";
+import createPersistedState from "vuex-persistedstate";
 
 export default createStore({
+  plugins: [createPersistedState()],
   state: {
     countries: [],
     question: "",
@@ -55,6 +57,7 @@ export default createStore({
         })
         .catch(error => {
           console.log(error);
+          commit("CHANGE_TYPE_MODAL", "error");
         });
     },
     generateQuestion({ commit, dispatch }) {
