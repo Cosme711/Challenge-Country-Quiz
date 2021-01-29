@@ -65,7 +65,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Contact
 
-
+- Portfolio [Cosme Gressier](https://www.cosme-gressier.com)
+- Twitter [@GressierCosme1](https://twitter.com/GressierCosme1)
 - GitHub [@Cosme711](https://github.com/Cosme711)
 
 
